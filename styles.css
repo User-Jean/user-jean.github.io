@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+    overflow: hidden;
+}
+
+ul{  
+    list-style: none;
+    padding-left: 0;
+}
+
+.container{
+    height: 100vh;
+    transition: all 2s;
+    position: relative;
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+.section:nth-child(odd){
+    background: linear-gradient(90deg, rgb(81,122,140) 0%, rgb(208,226,233) 100%)
+}
+
+.section:nth-child(even){
+    background: linear-gradient(90deg, rgb(208,226,233) 0%, rgb(81,122,140) 100%)
+}
+
+.section__home{
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__about{
+    left: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__skills{
+    left: 200vw;
+}
+
+.container.page1 {
+    transform: translateX(0);
+}
+
+.container.page2{
+    transform: translateX(-100vw);
+}
+
+.presentation{
+    font-size: 84px;
+    color: #fff;
+}
+
+.presentation__title{
+    line-height: .9;
+}
+
+.presentation__subtitle{
+    letter-spacing: 3px;
+    font-size: 18px;
+}
+
+/* About ME */
+.about{
+    color: #fff;
+    width: 30em;
+}
+
+.about__title{
+    font-size: 84px;
+}
+
+.about__description{
+
+}
+
+.nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0,0,0,.2);
+}
+
+.nav__logo{
+    color: white;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.nav__logo span{
+    font-size: 12px;
+}
+
+.logo{
+    font-size: 100px;
+    text-align: center;
+}
+
+.nav__content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__content__item:first-child{
+    border-top: 1px solid #fff;
+}
+
+.nav__content__item{
+    padding: .8em 1.5em;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #fff;
+}
+
+.nav__social__network{
+    color: #fff;
+    margin-bottom: 3em;
+}
+
+.leaf{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #82B398;
+    border-radius: 30px 0;
+    top: -30px;
+    transform: rotate(0deg);
+}
+
+.leaf__skills{
+    width: 5em;
+    height: 5em;
+    border-radius: 100% 0%;
+    transform: rotate(0deg);
+    display: flex;
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #fff;
+    top: -5em;
+}
+
+
+.leaf__animate35{
+    left: 25%;
+    animation: leafskills 4.5s 3.75s linear;
+}
+.leaf__animate40{
+    border-radius: 0 100%;
+    left: 35%;
+    animation: leafskills 4.5s .75s linear;
+}
+.leaf__animate45{
+    border-radius: 0 100%;
+    left: 45%;
+    animation: leafskills 4.5s 2.25s linear;
+}
+.leaf__animate50{
+    left: 55%;
+    animation: leafskills 4.5s linear;
+}
+.leaf__animate55{
+    left: 65%;
+    animation: leafskills 4.5s 1.5s linear;
+}
+.leaf__animate60{
+    border-radius: 0 100%;
+    left: 75%;
+    animation: leafskills 4.5s 3s linear;
+}
+
+.leaf__animate1{
+    left: 80%;
+    animation: leafanimate1 7s linear infinite;
+}
+
+.leaf__animate2{
+    left: 90%;
+    animation: leafanimate2 6s 2s linear infinite;
+}
+
+.leaf__animate3{
+    left: 85%;
+    animation: leafanimate2 6.5s 1s linear infinite;
+}
+
+.leaf__animate4{
+    left: 95%;
+    animation: leafanimate2 5s 2s linear infinite;
+}
+
+.leaf__animate5{
+    left: 92%;
+    animation: leafanimate2 6.7s 3s linear infinite;
+}
+
+.leaf__animate6{
+    left: 87%;
+    animation: leafanimate2 7.5s linear infinite;
+}
+
+.leaf__animate7{
+    left: 30%;
+    animation: leafanimate2 7.5s 2s linear infinite;
+}
+
+.leaf__animate8{
+    left: 10%;
+    animation: leafanimate2 6.5s 1s linear infinite;
+}
+
+.leaf__animate9{
+    left: 20%;
+    animation: leafanimate2 5.5s linear infinite;
+}
+
+.leaf__animate10{
+    left: 25%;
+    animation: leafanimate2 7s 1s linear infinite;
+}
+
+.leaf__animate11{
+    left: 15%;
+    animation: leafanimate2 6s linear infinite;
+}
+
+.leaf__animate12{
+    left: 17%;
+    animation: leafanimate2 7.5s 2s linear infinite;
+}
+
+@keyframes leafanimate1 {
+    30%{
+        transform: rotate(70deg) translate3d(200px, 400px, 0);
+    }
+    100%{
+        transform: rotate(180deg) translate3d(200px, -100vh, 0);
+    }
+}
+
+@keyframes leafanimate2 {
+    30%{
+        transform: rotate(70deg) translate3d(200px, 400px, 0);
+    }
+    100%{
+        transform: rotate(180deg) translate3d(200px, -100vh, 0);
+    }    
+}
+
+@keyframes leafskills {
+    100%{
+        transform: rotate(-50deg) translate3d(-70vh, 70vh, 0);
+    }
+}
+
+.btn{
+    padding: .8em 1.2em;
+    font-family: 'Source Code Pro', monospace;
+    border: none;
+    cursor: pointer;
+}
+
+
